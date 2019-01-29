@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-    Button
-} from '@alifd/next';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
+import createHistory from 'history/createHashHistory';
+import createStore from './store';
+import models from './models';
+import routes from './routes';
+
+const history = createHistory();
+const store = createStore(models);
+
 import './styles/global.scss';
 
 class App extends Component {
     render() {
         return (
-            <div>
-                <p>
-                    <Button type='primary'>Hello React!</Button>
-                </p>
-            </div>
+            <Provider store={store}>
+                <ConnectedRouter history={history}>
+                    {routes}
+                </ConnectedRouter>
+            </Provider>
         );
     }
 }
