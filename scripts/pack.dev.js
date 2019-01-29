@@ -90,7 +90,7 @@ const devConfig = {
         new HtmlWebPackPlugin({
             template: './app/index.html',
             filename: './index.html'
-        }),
+        })
     ]
 };
 module.exports = devConfig;
