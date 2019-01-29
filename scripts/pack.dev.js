@@ -60,7 +60,29 @@ const devConfig = {
                 include: [ // <= 包含⽬录, 缩⼩范围
                     path.join(__dirname, '../app')
                 ],
-                use: 'babel-loader'
+                use: [
+                    'babel-loader'
+                ]
+            },
+            {
+                test: /\.scss/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
+            },
+            {
+                test: /\.(bmp|gif|jpg|jpeg|png|svg)$/,
+                exclude: /node_modules/,
+                use: ['file-loader']
+
+            },
+            {
+                test: /\.(eot|otf|ttf|woff|woff2|svg)$/,
+                exclude: /node_modules/,
+                use: ['file-loader']
+
             }
         ]
     },
