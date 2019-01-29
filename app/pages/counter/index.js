@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'; // eslint-disable-line
 import { Button } from '@alifd/next';
 
 @connect(
@@ -14,7 +14,11 @@ import { Button } from '@alifd/next';
     })
 )
 class Counter extends Component {
-    static propTypes = {};
+    static propTypes = {
+        count: PropTypes.number,
+        increase: PropTypes.func,
+        decrease: PropTypes.func
+    };
 
     render() {
         const { count, increase, decrease } = this.props;

@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 /**
@@ -13,7 +13,7 @@ const devConfig = {
      */
     mode: 'development',
 
-    /** 
+    /**
      * 目标环境
      * https://webpack.js.org/configuration/target/#target
      */
@@ -25,7 +25,7 @@ const devConfig = {
      */
     entry: path.join(__dirname, '../app/index.js'),
 
-    /** 
+    /**
      * 输出配置
      */
     output: {
@@ -38,7 +38,7 @@ const devConfig = {
      */
     devtool: 'inline-source-map',
 
-    /** 
+    /**
      * 开发服务配置
      * https://webpack.js.org/configuration/dev-server/
      */

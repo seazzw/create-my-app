@@ -20,7 +20,7 @@ const routes = [
         path: '/login',
         exact: false,
         component: PageLogin
-    },
+    }
 ];
 
 export default (
@@ -36,4 +36,4 @@ export default (
 
         <Route component={Page404} />
     </Switch>
-)
+);

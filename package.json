@@ -4,9 +4,14 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "npm run lint -- --fix",
         "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/pack.dev.js --open",
         "build": "cross-env NODE_ENV=production webpack --config ./scripts/pack.build.js"
     },
+    "pre-commit": [
+        "lint"
+    ],
     "author": "zhuzhengwang",
     "license": "MIT",
     "devDependencies": {
@@ -39,6 +44,7 @@
         "mini-css-extract-plugin": "^0.5.0",
         "node-sass": "^4.11.0",
         "optimize-css-assets-webpack-plugin": "^5.0.1",
+        "pre-commit": "^1.2.2",
         "sass-loader": "^7.1.0",
         "style-loader": "^0.23.1",
         "terser-webpack-plugin": "^1.2.1",
