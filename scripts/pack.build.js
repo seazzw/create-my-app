@@ -1,63 +1,28 @@
 const path = require('path');
-// const webpack = require('webpack');
+const webpack = require('webpack');
+const merge = require('webpack-merge');
 const TerserPlugin = require('terser-webpack-plugin');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const baseConfig = require('./pack.base');
 
-const buildConfig = {
+const buildConfig = merge(baseConfig, {
     mode: 'production',
-    target: 'web',
-    entry: path.join(__dirname, '../app/index.js'),
+    devtool: false,
     output: {
         path: path.join(__dirname, '../build'),
-        filename: '[name].js'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                include: [
-                    path.join(__dirname, '../app')
-                ],
-                use: [
-                    'babel-loader'
-                ]
-            },
-            {
-                test: /\.scss$/,
-                exclude: /node_modules/,
-                include: [
-                    path.join(__dirname, '../app')
-                ],
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader'
-                ]
-            },
-            {
-                test: /\.(bmp|gif|jpg|jpeg|png|svg)$/,
-                exclude: /node_modules/,
-                use: ['file-loader']
-            },
-            {
-                test: /\.(eot|otf|ttf|woff|woff2|svg)$/,
-                exclude: /node_modules/,
-                use: ['file-loader']
-            }
-        ]
+        filename: '[name].[chunkhash:8].js',
+        publicPath: '/public/'
     },
     plugins: [
-        new HtmlWebPackPlugin({
-            template: './app/index.html',
-            filename: './index.html'
-        }),
-        new MiniCssExtractPlugin({
-            filename: '[name].[chunkhash].css',
-            chunkFilename: '[id].css'
-        })
+        new CopyWebpackPlugin([
+            {
+                from: path.resolve(__dirname, '../public'),
+                to: path.resolve(__dirname, '../build'),
+                ignore: ['.*']
+            }
+        ]),
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
     optimization: {
         minimizer: [
@@ -74,5 +39,5 @@ const buildConfig = {
             new OptimizeCSSAssetsPlugin({})
         ]
     }
-};
+});
 module.exports = buildConfig;
