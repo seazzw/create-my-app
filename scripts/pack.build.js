@@ -14,6 +14,10 @@ const buildConfig = merge(baseConfig, {
         filename: '[name].[chunkhash:8].js',
         publicPath: '/public/'
     },
+    externals: {
+        'react': 'React',
+        'react-dom': 'ReactDOM'
+    },
     plugins: [
         new CopyWebpackPlugin([
             {
