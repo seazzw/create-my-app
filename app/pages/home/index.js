@@ -9,7 +9,7 @@ class Home extends Component {
         return (
             <div>
                 <p>
-                    <Button type='primary'>Hello React!</Button>
+                    <Button type='primary'>Hello Reacttt!</Button>
                 </p>
             </div>
         );
