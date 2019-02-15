@@ -31,6 +31,13 @@ const baseConfig = {
         filename: '[name].js'
     },
 
+    resolve: {
+        alias: {
+            'public': path.join(__dirname, '../public'),
+            '@': path.join(__dirname, '../src')
+        }
+    },
+
     /**
      * 模块
      * https://webpack.js.org/configuration/module/
@@ -48,7 +55,7 @@ const baseConfig = {
                 ]
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss|css)$/,
                 use: [
                     'style-loader',
                     'css-loader',
@@ -57,7 +64,7 @@ const baseConfig = {
             },
             {
                 test: /\.(bmp|gif|jpg|jpeg|png|svg)$/,
-                exclude: /node_modules/,
+                // exclude: /node_modules/,
                 use: [
                     'file-loader'
                 ]
@@ -68,6 +75,13 @@ const baseConfig = {
                 use: [
                     'file-loader'
                 ]
+            },
+            {
+                test: /\.swf$/,
+                loader: 'file-loader',
+                query: {
+                    name: 'static/media/[name].[ext]'
+                }
             }
         ]
     },
