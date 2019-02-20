@@ -9,7 +9,7 @@ import 'mediaelement';
 import 'mediaelement/build/mediaelementplayer.min.css';
 import 'mediaelement/build/mediaelement-flash-video.swf';
 
-export default class MediaElement extends Component {
+class MediaElement extends Component {
     static propTypes = {
         options: PropTypes.string,
         id: PropTypes.string
@@ -88,3 +88,5 @@ export default class MediaElement extends Component {
         }
     }
 }
+
+export default MediaElement;

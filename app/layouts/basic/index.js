@@ -19,7 +19,7 @@ class BasicLayout extends Component {
                         <BasicMenu />
                     </div>
                     <div className='basic__bd__main'>
-                        <div style={{ padding: 15 }} >
+                        <div>
                             {children}
                         </div>
                         <div className='basic__bd__ft'>

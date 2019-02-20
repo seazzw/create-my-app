@@ -1,4 +1,4 @@
-import { Counter } from './pages/counter/model';
+import { Counter } from './pages/Counter/model';
 
 export default {
     Counter

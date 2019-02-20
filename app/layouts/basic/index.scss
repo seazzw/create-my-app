@@ -14,24 +14,22 @@
     }
     &__bd{
         position: relative;
+        display: flex;
         top:50px;
         left:0;
         width: 100%;
         height: calc(100% - 50px);
         &__menu{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 200px;
-            height: 100%;
-            background: #F2F3F7
+            width: 240px;
         }
         &__main{
             height: 100%;
-            padding-left: 200px;
+            flex:1;
             overflow: scroll;
+            background: rgb(242, 242, 242);
         }
         &__ft{
+            display: absolute;
             height:50px;
             line-height: 50px;
             text-align: center;

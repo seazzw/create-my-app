@@ -7,7 +7,7 @@ import createStore from './store';
 import models from './models';
 import routes from './routes';
 
-import './styles/global.scss';
+// import './styles/global.scss';
 
 const history = createHistory();
 const store = createStore(models);

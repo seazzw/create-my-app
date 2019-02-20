@@ -34,7 +34,7 @@ const baseConfig = {
     resolve: {
         alias: {
             'public': path.join(__dirname, '../public'),
-            '@': path.join(__dirname, '../src')
+            '@': path.join(__dirname, '../app')
         }
     },
 

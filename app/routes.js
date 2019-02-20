@@ -25,7 +25,7 @@ const blankRoutes = [
     {
         path: '/login',
         exact: false,
-        component: 'login'
+        component: 'Login'
     }
 ];
 
@@ -33,12 +33,17 @@ const basicRoutes = [
     {
         path: '/',
         exact: true,
-        component: 'home'
+        component: 'RoomManage'
     },
     {
         path: '/counter',
         exact: false,
-        component: 'counter'
+        component: 'Counter'
+    },
+    {
+        path: '/live',
+        exact: false,
+        component: 'Live'
     }
 ];
 
