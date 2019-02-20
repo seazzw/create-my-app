@@ -1,6 +1,8 @@
 .menu {
     height:100%;
     border: none;
-    box-shadow: 2px 2px 2px #eee;
+    &__name{
+        margin-left:5px;
+    }
     // background: transparent;
 }

@@ -1,2 +1,2 @@
-export { default as BlankLayout } from './blank';
-export { default as BasicLayout } from './basic';
+export { default as BlankLayout } from './BlankLayout';
+export { default as BasicLayout } from './BasicLayout';

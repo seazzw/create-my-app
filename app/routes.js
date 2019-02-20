@@ -58,6 +58,7 @@ export default (
                 component={lazy(item.component)}
             />
         ))}
+
         {blankRoutes.map(item => (
             <RouteWithLayout
                 key={item.path}

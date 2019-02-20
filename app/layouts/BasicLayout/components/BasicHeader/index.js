@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';//eslint-disable-line
 import { Link, withRouter } from 'react-router-dom';
 import { Nav, Icon, Menu, Dropdown } from '@alifd/next';
-import { headerMenuConfig } from '../../../../menuConfig';
+import { headerMenuConfig } from '@/menuConfig';
 import logoUrl from 'public/images/logo.png';
 import userUrl from 'public/images/labi.jpg';
 import './index.scss';
 
 const { SubNav, Item } = Nav;
 @withRouter
+
 class BasicHeader extends Component {
     render() {
         // 用户个人设置项
@@ -141,7 +142,6 @@ class BasicHeader extends Component {
 
 BasicHeader.propTypes = {
     location: PropTypes.object
-
 };
 
 export default BasicHeader;
