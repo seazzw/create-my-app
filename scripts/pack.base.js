@@ -21,7 +21,7 @@ const baseConfig = {
     * 程序的入口
     * https://webpack.js.org/configuration/entry-context/#entry
     */
-    entry: path.join(__dirname, '../app/index.js'),
+    entry: path.join(__dirname, '../src/index.js'),
 
     /**
      * 输出配置
@@ -34,7 +34,7 @@ const baseConfig = {
     resolve: {
         alias: {
             'public': path.join(__dirname, '../public'),
-            '@': path.join(__dirname, '../app')
+            '@': path.join(__dirname, '../src')
         }
     },
 
@@ -48,7 +48,7 @@ const baseConfig = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 include: [
-                    path.join(__dirname, '../app')
+                    path.join(__dirname, '../src')
                 ],
                 use: [
                     'babel-loader'
@@ -95,7 +95,7 @@ const baseConfig = {
             __PROD__
         }),
         new HtmlWebPackPlugin({
-            template: './app/index.html',
+            template: './src/index.html',
             filename: './index.html',
             env: env
         })
