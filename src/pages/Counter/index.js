@@ -24,6 +24,7 @@ class Counter extends Component {
         const { count, increase, decrease } = this.props;
         return (
             <div>
+                <p>一个简单的计数器, 用于演示同步Action的处理</p>
                 <h4>The count is: {count}</h4>
                 <p>
                     <Button style={{ marginRight: 5 }} onClick={() => decrease(1)}>减一</Button>
