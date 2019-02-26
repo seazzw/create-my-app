@@ -10,7 +10,7 @@ class Live extends Component {
     render() {
         const breadcrumb = [
             {
-                link: '/#/',
+                link: '#',
                 text: '直播间管理'
             },
             {
@@ -20,9 +20,8 @@ class Live extends Component {
         ];
         const sources = [
             // { src: 'http://www.streambox.fr/playlists/test_001/stream.m3u8', type: 'application/x-mpegURL' }
-            // { src: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4', type: 'video/mp4' }
+            { src: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4', type: 'video/mp4' }
             // { src: 'rtmp://firehose.cul.columbia.edu:1935/vod/mp4:sample.mp4', type: 'video/rtmp' }
-            { src: 'rtmp://pili-live-rtmp.nanjids.com/nanjids/1', type: 'video/rtmp' }
         ];
         const config = {};
         const tracks = {};

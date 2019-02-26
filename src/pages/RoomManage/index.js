@@ -34,7 +34,7 @@ class RoomManage extends Component {
     render() {
         const breadcrumb = [
             {
-                link: '/#/',
+                link: '#',
                 text: '直播间管理'
             },
             {
@@ -79,10 +79,8 @@ class RoomManage extends Component {
                         <Table.Column title='观看人数' dataIndex='peopleNum' />
                         <Table.Column title='直播类目' dataIndex='category' />
                         <Table.Column title='直播时长（小时）' dataIndex='time' />
-                        <Table.Column title='流量费' dataIndex='fee' />
                         <Table.Column title='销量' dataIndex='salesVolume' />
                         <Table.Column title='销售额' dataIndex='sales' />
-                        <Table.Column title='截屏图片' dataIndex='pic' />
                         <Table.Column title='观看 ' cell={toLivingRoom} />
                         <Table.Column title='权限' cell={isLivingRoomOpen} />
                     </Table>
