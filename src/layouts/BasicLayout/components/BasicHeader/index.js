@@ -27,7 +27,7 @@ class BasicHeader extends Component {
             <div className='header'>
                 <div className='header__logo'>
                     <img src={logoUrl} alt='Admin Starter' />
-                    <a href='/' title='Admin Starter'>Admin</a>
+                    <a href='#' title='Admin Starter'>Admin</a>
                 </div>
 
                 <Dropdown trigger={
