@@ -11,6 +11,7 @@ const baseConfig = require('./pack.base');
 const devConfig = merge(baseConfig, {
     /**
      * 模式
+     * webpack4中设置mode会自动配置DefinePlugin,是为了业务代码中获取NODE_ENV，要想webpack.config中获取请通过cross-env
      * https://webpack.js.org/concepts/mode/
      */
     mode: 'development',

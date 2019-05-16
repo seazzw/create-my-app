@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'; // eslint-disable-line
-import { CustomBreadcrumb, Card } from '@/components';
+import { CustomBreadcrumb } from '@/components';
 
 import MediaElement from './components/MediaElement';
 

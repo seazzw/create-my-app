@@ -1,10 +1,10 @@
 const path = require('path');
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const env = process.env.NODE_ENV;
-const __DEV__ = env === 'development';
-const __PROD__ = env === 'production';
+// const __DEV__ = env === 'development';
+// const __PROD__ = env === 'production';
 
 /**
  * webpack 配置
@@ -87,13 +87,13 @@ const baseConfig = {
     },
 
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: JSON.stringify(env)
-            },
-            __DEV__,
-            __PROD__
-        }),
+        // new webpack.DefinePlugin({
+        //     'process.env': {
+        //         NODE_ENV: JSON.stringify(env)
+        //     },
+        //     __DEV__,
+        //     __PROD__
+        // }),
         new HtmlWebPackPlugin({
             template: './src/index.html',
             filename: './index.html',
